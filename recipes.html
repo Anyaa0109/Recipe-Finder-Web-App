@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Recipes</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Recipes</h1>
+        <a href="/">Back to Home</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Recipe Name</th>
+                    <th>Category</th>
+                    <th>Preparation Time (min)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for recipe in recipes %}
+                <tr>
+                    <td>{{ recipe[0] }}</td>
+                    <td>{{ recipe[1] }}</td>
+                    <td>{{ recipe[2] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
